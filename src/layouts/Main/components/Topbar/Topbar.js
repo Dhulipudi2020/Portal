@@ -46,6 +46,9 @@ const Topbar = (props) => {
 	return (
 		<AppBar {...rest} className={clsx(classes.root, className)}>
 			<Toolbar>
+			<IconButton color="inherit" onClick={onSidebarOpen}>
+						<MenuIcon />
+					</IconButton>
 				<RouterLink to="/" />
 				<img
 					src="/images/logos/wiley.png"
@@ -68,14 +71,6 @@ const Topbar = (props) => {
 				</Typography>
 
 				<div className={classes.flexGrow} />
-				<Hidden mdDown>
-					<IconButton color="inherit" />
-				</Hidden>
-				<Hidden lgUp>
-					<IconButton color="inherit" onClick={onSidebarOpen}>
-						<MenuIcon />
-					</IconButton>
-				</Hidden>
 			</Toolbar>
 			<Avatar alt="Person" className={classes.avatar} component={RouterLink} to="/account" />
 		</AppBar>

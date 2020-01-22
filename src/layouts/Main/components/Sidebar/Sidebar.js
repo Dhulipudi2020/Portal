@@ -2,12 +2,13 @@ import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
-import { Divider, SwipeableDrawer } from '@material-ui/core';
+import { Divider, Drawer } from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import PeopleIcon from '@material-ui/icons/People';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import ImageIcon from '@material-ui/icons/Image';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
+
 
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 
@@ -73,7 +74,7 @@ const Sidebar = (props) => {
 	];
 
 	return (
-		<SwipeableDrawer
+		<Drawer
 			anchor="left"
 			classes={{ paper: classes.drawer }}
 			onClose={onClose}
@@ -88,7 +89,7 @@ const Sidebar = (props) => {
 				<label style={{ fontWeight: 'bold' }}>Operational</label>
 				<SidebarNav className={classes.nav} pages={Opages} />
 			</div>
-		</SwipeableDrawer>
+		</Drawer>
 	);
 };
 
